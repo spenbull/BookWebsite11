@@ -65,3 +65,4 @@
 /Users/spencerbullock/Desktop/BookWebsite11/backend/BookWebsite.API/obj/Debug/net8.0/BookWebsite.API.pdb
 /Users/spencerbullock/Desktop/BookWebsite11/backend/BookWebsite.API/obj/Debug/net8.0/BookWebsite.API.genruntimeconfig.cache
 /Users/spencerbullock/Desktop/BookWebsite11/backend/BookWebsite.API/obj/Debug/net8.0/ref/BookWebsite.API.dll
+/Users/spencerbullock/Desktop/BookWebsite11/backend/BookWebsite.API/obj/Debug/net8.0/BookWebsite.API.sourcelink.json
