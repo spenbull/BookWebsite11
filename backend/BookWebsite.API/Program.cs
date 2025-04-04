@@ -17,9 +17,9 @@ services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", builder =>
     {
-        builder.WithOrigins("https://gentle-hill-0c4252f1e.6.azurestaticapps.net")
-               .AllowAnyHeader()
-               .AllowAnyMethod();
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
