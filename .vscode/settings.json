@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7ac18a4b-78a5-4450-923c-90f8bd86a414/resourceGroups/appsvc_windows_eastus/providers/Microsoft.Web/sites/BookWebsiteBullockBackEnd",
+    "appService.deploySubpath": "backend/BookWebsite.API/publish"
+}

@@ -13,7 +13,18 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookDbContext>(options=>
     options.UseSqlite(builder.Configuration.GetConnectionString("BookConnection")));
 
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+    options.AddPolicy("AllowReactApp",
+        policy =>
+        {
+            policy.WithOrigins(
+                    "http://localhost:3005",
+                    "https://bookwebsitebullockbackend-eefyhae8dgemfue4.eastus-01.azurewebsites.net"
+                )
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        }));
+
 
 var app = builder.Build();
 
@@ -24,7 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(x=>x.WithOrigins("http://localhost:3005"));
+app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
 
