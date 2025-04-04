@@ -15,9 +15,10 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 // Correct the services.AddCors() call to builder.Services.AddCors()
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", builder =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        builder.AllowAnyOrigin()    // Allows any origin
+        policy
+            .WithOrigins("https://gentle-hill-0c4252f1e.6.azurestaticapps.net") // <-- your static frontend
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
